@@ -115,12 +115,12 @@ def line_intersect(l1: Line, l2: Line) -> Point2D | None:
 
     if l1.is_vertical():
         x = l1.p1.x
-        y = l1.get_y(x)
+        y = l2.get_y(x)
         return Point2D(x, y)
 
     if l2.is_vertical():
         x = l2.p1.x
-        y = l2.get_y(x)
+        y = l1.get_y(x)
         return Point2D(x, y)
 
     m1 = l1.get_slope()

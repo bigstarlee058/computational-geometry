@@ -48,7 +48,7 @@ def segment_intersect(s1: Segment, s2: Segment) -> Point2D | None:
     Returns:
        `None` if parallel, the intersection otherwise.
     """
-    from geometric.intersection.line import Line, line_intersect
+    from geometric.lines.line import Line, line_intersect
     p = line_intersect(Line(s1.p1, s1.p2), Line(s2.p1, s2.p2))
 
     if p is None:
